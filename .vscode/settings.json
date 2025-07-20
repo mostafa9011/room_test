@@ -1,6 +1,7 @@
 {
-    "pieces.cloudCapabilities": "Blended",
-    "pieces.telemetry": true,
-    "workbench.editor.pinnedTabsOnSeparateRow": true,
-    "flutter-intl.showMetadataWarning": false
+  "pieces.cloudCapabilities": "Blended",
+  "pieces.telemetry": true,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "flutter-intl.showMetadataWarning": false,
+  "dart.flutterSdkPath": ".fvm/versions/3.32.7"
 }

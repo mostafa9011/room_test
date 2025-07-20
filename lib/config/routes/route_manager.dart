@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import '../../features/splash/presentation/screens/splash_screen.dart';
+
+import '../../features/home/presentation/screens/home_screen.dart';
 import 'page_name.dart';
 
 class RouteManager {
@@ -9,9 +10,9 @@ class RouteManager {
 
   static Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      case PageName.splash:
+      case PageName.homeScreen:
         return _getPageTransition(
-          const SplashScreen(),
+          const HomeScreen(),
           settings: routeSettings,
         );
 

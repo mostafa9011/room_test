@@ -1,8 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-import '../../config/routes/page_name.dart';
-import '../../config/routes/route_manager.dart';
 import '../errors/api/api_response_codes.dart';
 import '../helpers/cache_helper.dart';
 import '../utils/functions/kprint.dart';
@@ -39,11 +37,6 @@ List<Interceptor> dioInterceptors = [
 
         // Clear cashed data
         CacheHelper.removeData(key: KeysManager.token);
-        // Navigate to login page
-        RouteManager.navigatorKey.currentState!.pushNamedAndRemoveUntil(
-          PageName.login,
-          (route) => false,
-        );
       } else {
         return handler.next(error);
       }

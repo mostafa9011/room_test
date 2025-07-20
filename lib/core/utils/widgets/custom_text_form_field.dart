@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:new_structure/core/extensions/context_extension.dart';
 
 import '../../../config/themes/text_style.dart';
+import '../../extensions/context_extension.dart';
 import '../functions/input_decoration_getter.dart';
 import 'label_text_component.dart';
 
@@ -89,7 +89,7 @@ class CustomTextFormField extends StatelessWidget with InputDecorationGetter {
               ? (context,
                   {required currentLength,
                   required isFocused,
-                  required maxLength}) {
+                  required maxLength,}) {
                   return Text(
                     "$currentLength/$maxLength",
                     style: getRegularStyle(
@@ -137,7 +137,7 @@ class CustomTextFormField extends StatelessWidget with InputDecorationGetter {
           validator: validator ??
               (value) {
                 if ((value == null || value.isEmpty) && isRequired) {
-                  return context.tr.fieldRequired;
+                  // return context.tr.fieldRequired;
                 }
                 return null;
               },
